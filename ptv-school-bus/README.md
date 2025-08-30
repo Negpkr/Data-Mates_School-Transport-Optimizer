@@ -142,74 +142,90 @@ ptv-school-bus/
 
 #### 1. Welcome Screen
 ![Onboarding - Welcome](./mockups/onboarding_01_welcome.png)
+
 *Welcoming introduction showcasing the benefits of school bus tracking and safety features.*
 
 #### 2. School Selection
 ![Onboarding - Select School](./mockups/onboarding_02_select_school.png)
+
 *Intuitive school selection interface with search, favorites, and recent selections.*
 
 #### 3. Myki Integration
 ![Onboarding - Link Myki](./mockups/onboarding_03_link_myki.png)
+
 *Seamless Myki card integration for automatic fare calculation and journey tracking.*
 
 #### 4. Travel Preferences
 ![Onboarding - Set Preferences](./mockups/onboarding_04_set_preferences.png)
+
 *Customizable preferences for fastest vs. safest routes, tracking options, and notifications.*
 
 #### 5. Notification Setup
 ![Onboarding - Enable Notifications](./mockups/onboarding_05_enable_notifications.png)
+
 *Permission management for push notifications, location services, and journey alerts.*
 
 #### 6. Setup Complete
 ![Onboarding - Done](./mockups/onboarding_06_done.png)
+
 *Completion screen with quick access to main features and next steps guidance.*
 
 ### Trip Planning & Navigation
 
 #### Public Transport Results
 ![Trip Planner - Public Transport](./mockups/trip_planner_public.png)
+
 *Comprehensive trip planning with public transport options, showing routes, times, and transfer points.*
 
 #### School Bus Integration
 ![Trip Planner - School Bus](./mockups/trip_planner_school_bus.png)
+
 *Dedicated school bus routing with safety features, real-time updates, and route comparison.*
 
 #### School Bus Directory
 ![School Buses List](./mockups/school_buses_list.png)
+
 *Complete directory of available school buses with filtering, search, and safety ratings.*
 
 #### Advanced Filtering
 ![School Buses Filter](./mockups/school_buses_filter.png)
+
 *Advanced filtering options by school, route, time, safety preferences, and accessibility features.*
 
 ### Route Details & Live Tracking
 
 #### Route Information
 ![Route Details - School Bus](./mockups/route_details_school_bus.png)
+
 *Detailed route information including stops, schedules, safety ratings, and walking directions.*
 
 #### Live Bus Tracking
 ![Live Bus Tracking](./mockups/live_bus_tracking.png)
+
 *Real-time GPS tracking with estimated arrival times, bus status updates, and crowd information.*
 
 ### Settings & Configuration
 
 #### App Settings
 ![Settings](./mockups/settings.png)
+
 *Comprehensive settings panel for notifications, privacy, accessibility, and app preferences.*
 
 ### User Profiles & Safety
 
 #### Child Profile Management
 ![Profile - My Child](./mockups/profile_my_child.png)
+
 *Child-specific profiles with safety settings, travel preferences, and journey history.*
 
 #### Safety Reporting
 ![Report Unsafe Stop - Form](./mockups/report_unsafe_stop_form.png)
+
 *Intuitive form for reporting unsafe stops, incidents, or safety concerns with photo upload.*
 
 #### Report Confirmation
 ![Report Unsafe Stop - Submitted](./mockups/report_unsafe_stop_submitted.png)
+
 *Confirmation screen with tracking number, next steps, and follow-up information for reported issues.*
 
 ---
