@@ -15,7 +15,6 @@
 
 - [Introduction](#introduction)
 - [Overview](#overview)
-- [Project Structure](#project-structure)
 - [Design Screens](#design-screens)
 - [Technical Specifications](#technical-specifications)
 - [Getting Started](#getting-started)
@@ -109,21 +108,6 @@ graph TD
 ```
 
 ---
-
-## Project Structure
-
-```
-ptv-school-bus/
-├── mockups/                    # Design mockups (500x1000px)
-│   ├── onboarding_*.png       # User onboarding flow (6 screens)
-│   ├── trip_planner_*.png     # Trip planning screens (4 screens)
-│   ├── live_bus_tracking.png  # Real-time tracking interface
-│   ├── settings.png           # App settings and preferences
-│   ├── profile_*.png          # User profiles and management
-│   └── report_*.png          # Safety reporting workflow
-├── README.md                  # Comprehensive documentation
-└── .DS_Store                  # System files
-```
 
 ### File Statistics
 
