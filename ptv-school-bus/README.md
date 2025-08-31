@@ -172,7 +172,6 @@ graph TD
 *Complete directory of available school buses with filtering, search, and safety ratings.*
 
 #### Advanced Filtering
-![School Buses Filter](./mockups/school_buses_filter.png)
 
 *Advanced filtering options by school, route, time, safety preferences, and accessibility features.*
 
@@ -401,31 +400,4 @@ gantt
 - [Safety Guidelines](https://www.ptv.vic.gov.au/safety) - Transport safety information
 
 ---
-
-## License
-
-### Government Copyright
-
-© 2025 Public Transport Victoria. All rights reserved.
-
-### Usage Terms
-
-*This design system is proprietary to PTV and intended for internal use only. Unauthorized reproduction or distribution is prohibited.*
-
-### Confidentiality
-
-- **Internal Use Only**: Not for public distribution
-- **Government Property**: Owned by Public Transport Victoria
-- **Development Purpose**: Intended for implementation team use
-
----
-
-<div align="center">
-
-
-**[PTV Website](https://www.ptv.vic.gov.au)** • **[School Bus Info](https://www.ptv.vic.gov.au/school-bus)** • **[Contact Us](mailto:info@ptv.vic.gov.au)**
-
-*Empowering families with safer, smarter school transportation solutions*
-
-</div>
 
