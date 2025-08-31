@@ -249,11 +249,6 @@ We welcome contributions to improve Trust Track! Please see our contributing gui
 - **Technical Issues**: Check the troubleshooting section
 - **API Questions**: Use the interactive API documentation
 - **Data Questions**: Refer to the notebooks for analysis details
-- **User Support**: Contact support@trusttrack.com.au
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
 
@@ -264,6 +259,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-**Trust Track** - Making school journeys safer, one route at a time. 🚌🛡️
+**Trust Track** - Making school journeys safer, one route at a time. 
 
 *For detailed documentation of specific components, see the README files in each folder.*
