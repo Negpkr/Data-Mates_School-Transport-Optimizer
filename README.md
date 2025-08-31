@@ -1,4 +1,4 @@
-# Trust Track Notebooks
+# Trust Track Notebook
 
 A collection of Jupyter notebooks and interactive maps that demonstrate the data analysis, routing algorithms, and safety calculations behind the Trust Track school safety application.
 
