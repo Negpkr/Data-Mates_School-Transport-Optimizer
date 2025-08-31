@@ -2,6 +2,9 @@
 
 A comprehensive school safety routing application designed to help parents and students find the safest routes to school using public transport, school buses, and walking paths with real-time safety analysis.
 
+## Project Description
+- [Project_Description.md](Project_Description.md)
+
 ## What is Trust Track?
 
 Trust Track is a modern web application that prioritizes student safety when planning routes to school. It combines real-time public transport data, school bus services, safety analytics, and interactive mapping to provide parents with peace of mind and students with secure travel options.
