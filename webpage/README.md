@@ -2,37 +2,35 @@
 
 A modern, safety-focused web application for planning secure routes to school using public transport, school buses, and walking paths.
 
-![Trust Track Web App](https://img.shields.io/badge/Trust%20Track-Web%20Application-blue?style=for-the-badge&logo=shield)
-
-## 🌐 Live Application
+## Live Application
 
 **Access the application:** http://localhost:8000
 
-## 🎯 Overview
+## Overview
 
 Trust Track is a comprehensive web-based school safety routing application designed to help parents and students find the safest routes to school. The application combines real-time public transport data, school bus services, and safety analytics to provide peace of mind for school journeys.
 
-## ✨ Key Features
+## Key Features
 
-### 🛡️ Safety-First Design
+### Safety-First Design
 - **Safety Scoring**: Every route is evaluated for safety factors
 - **Well-lit Paths**: Prioritizes routes with good lighting
 - **Population Density**: Favors populated, well-monitored areas
 - **Traffic Patterns**: Considers pedestrian-friendly routes
 
-### 🚌 Multi-Modal Transport
+### Multi-Modal Transport
 - **Public Transport**: Integration with Canberra's public transport network
 - **School Buses**: Dedicated school bus services and routes
 - **Walking Routes**: Safe pedestrian paths with safety overlays
 - **Park & Ride**: Convenient parking and transport options
 
-### 📱 Modern User Interface
+### Modern User Interface
 - **Responsive Design**: Works seamlessly on desktop, tablet, and mobile
 - **Interactive Maps**: Real-time route visualization with Leaflet.js
 - **Intuitive Navigation**: Clean, modern interface with clear icons
 - **Real-time Updates**: Live bus tracking and arrival predictions
 
-## 🖥️ Application Screenshots
+## Application Screenshots
 
 ### Main Application Interface
 
@@ -120,7 +118,7 @@ Trust Track is a comprehensive web-based school safety routing application desig
 ![API Schema Overview](screenshots/api-6.png)
 *Complete API schema and model documentation*
 
-## 🚀 How to Use
+## How to Use
 
 ### Getting Started
 
@@ -161,7 +159,7 @@ Trust Track is a comprehensive web-based school safety routing application desig
 - **Route Preferences**: Set safety vs. speed priorities
 - **Transport Preferences**: Choose preferred transport modes
 
-## 🛠️ Technical Features
+## Technical Features
 
 ### Frontend Technologies
 - **HTML5/CSS3**: Modern, responsive design
@@ -181,7 +179,7 @@ Trust Track is a comprehensive web-based school safety routing application desig
 - **Safety Alerts**: Immediate notifications for incidents
 - **Interactive Maps**: Real-time route visualization
 
-## 📱 Browser Compatibility
+## Browser Compatibility
 
 - **Chrome**: Full support (recommended)
 - **Firefox**: Full support
@@ -189,7 +187,7 @@ Trust Track is a comprehensive web-based school safety routing application desig
 - **Edge**: Full support
 - **Mobile Browsers**: Optimized for iOS Safari and Chrome Mobile
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -214,7 +212,7 @@ Trust Track is a comprehensive web-based school safety routing application desig
 - **Interactive Testing**: http://localhost:8000/redoc
 - **Browser Console**: Check for JavaScript errors (F12)
 
-## 🎨 Design Principles
+## Design Principles
 
 ### User-Centered Design
 - **Safety First**: Every feature prioritizes user safety
@@ -228,7 +226,7 @@ Trust Track is a comprehensive web-based school safety routing application desig
 - **Typography**: Readable fonts with proper hierarchy
 - **Icons**: Clear, meaningful iconography
 
-## 📊 Performance Metrics
+## Performance Metrics
 
 - **Page Load Time**: < 3 seconds
 - **Route Calculation**: < 5 seconds
@@ -236,14 +234,14 @@ Trust Track is a comprehensive web-based school safety routing application desig
 - **API Response**: < 1 second
 - **Mobile Performance**: Optimized for mobile networks
 
-## 🔒 Privacy & Security
+## Privacy & Security
 
 - **Data Protection**: No personal data stored
 - **Secure Connections**: HTTPS encryption
 - **Privacy Compliance**: Meets Australian privacy standards
 - **Local Processing**: Route calculations done locally
 
-## 🌟 Future Enhancements
+## Future Enhancements
 
 - **Weather Integration**: Route planning based on weather conditions
 - **Parent Notifications**: SMS/email alerts for route changes
@@ -251,7 +249,7 @@ Trust Track is a comprehensive web-based school safety routing application desig
 - **Community Features**: Share safe routes with other parents
 - **Multi-language Support**: Support for additional languages
 
-## 📁 Webpage Structure
+## Webpage Structure
 
 ```
 webpage/
@@ -271,7 +269,7 @@ webpage/
     └── api-*.png          # Additional API documentation views
 ```
 
-## 📋 Screenshot Summary
+## Screenshot Summary
 
 ### Main Interface (2 screenshots)
 - Web Application Overview
@@ -294,7 +292,8 @@ webpage/
 
 ---
 
-**Trust Track Web Application** - Making school journeys safer, one route at a time. 🚌🛡️
+**Trust Track Web Application** - Making school journeys safer, one route at a time.
 
 *For technical documentation and API reference, see the main project README.md file.*
+
 
