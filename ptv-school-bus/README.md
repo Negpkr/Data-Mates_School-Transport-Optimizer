@@ -4,8 +4,6 @@
 > Comprehensive mobile app design system for enhanced school bus tracking and management
 
 [![PTV School Bus](https://img.shields.io/badge/PTV-School%20Bus-blue?style=for-the-badge&logo=bus)](https://www.ptv.vic.gov.au)
-[![Status](https://img.shields.io/badge/Status-Design%20Complete-green?style=for-the-badge)](https://github.com/ptv/school-bus-integration)
-[![Last Updated](https://img.shields.io/badge/Last%20Updated-2025--08--30-lightgrey?style=for-the-badge)](https://github.com/ptv/school-bus-integration/commits/main)
 [![Design Files](https://img.shields.io/badge/Design%20Files-16%20Mockups-orange?style=for-the-badge)](./mockups/)
 [![Resolution](https://img.shields.io/badge/Resolution-500x1000px-purple?style=for-the-badge)](./mockups/)
 
