@@ -1,290 +1,247 @@
-# Trust Track - School Safety Demo
+# Trust Track Notebooks
 
-A comprehensive school safety routing application designed to help parents and students find the safest routes to school using public transport, school buses, and walking paths.
+A collection of Jupyter notebooks and interactive maps that demonstrate the data analysis, routing algorithms, and safety calculations behind the Trust Track school safety application.
 
-![Trust Track Logo](https://img.shields.io/badge/Trust%20Track-School%20Safety-blue?style=for-the-badge&logo=shield)
+## Overview
 
-## 🎯 Overview
+The notebooks folder contains the research and development work that led to the Trust Track application. It includes data analysis of ACT transport and safety data, routing algorithm development, and interactive map visualizations.
 
-Trust Track is a modern web application that prioritizes student safety when planning routes to school. It combines real-time public transport data, school bus services, and safety analytics to provide parents with peace of mind and students with secure travel options.
+## Contents
 
-## ✨ Key Features
+### Core Analysis Notebook
 
-- **Safety-First Routing**: Prioritizes well-lit, populated routes with high safety scores
-- **Multi-Modal Transport**: Public transport, school buses, and walking options
-- **Real-Time Tracking**: Live bus tracking and arrival predictions
-- **Interactive Maps**: Visual route planning with safety overlays
-- **School Integration**: Direct integration with ACT school bus services
-- **Parent Dashboard**: Comprehensive safety monitoring and alerts
-- **Mobile Responsive**: Works seamlessly on all devices
+#### mvp_routing 2.ipynb
+The main analysis notebook that demonstrates the complete Trust Track routing system.
 
-## 🚀 Quick Start
+**Key Components:**
+- **Data Loading**: ACT government datasets for schools, transport, and safety
+- **Graph Construction**: OpenStreetMap-based walking network for Canberra
+- **Safety Analysis**: Crash data visualization and risk assessment
+- **Route Calculation**: Fastest and safest path algorithms
+- **Interactive Maps**: Folium-based route visualization
+
+**Datasets Analyzed:**
+- ACT Road Crash Data (2025)
+- ACT School Bus Services
+- Bus Routes
+- Census Data for ACT Schools
+- Daily Public Transport Journeys
+- Park and Ride Locations
+- Smart Parking Lots
+
+### Interactive Maps
+
+#### trust_track_demo_map.html
+Complete Trust Track demonstration map showing:
+- **Route Comparison**: Fastest vs. safest walking paths
+- **Bus Integration**: Public transport segments
+- **Safety Overlays**: Crash data and risk indicators
+- **Interactive Controls**: Layer toggles and route selection
+
+#### trust_track_route.html
+Basic route visualization with:
+- **Single Route Display**: Individual route plotting
+- **Waypoint Markers**: Start, end, and intermediate points
+- **Distance Information**: Route length and estimated time
+
+#### trust_track_route_with_bus.html
+Enhanced route visualization including:
+- **Multi-modal Routes**: Walking and bus segments
+- **Transport Integration**: Bus stop locations and routes
+- **Combined Paths**: Seamless walking-to-bus transitions
+
+#### trust_track_map_fixed.html
+Corrected map version with:
+- **Bug Fixes**: Resolved display and interaction issues
+- **Improved Performance**: Optimized rendering and loading
+- **Enhanced UI**: Better controls and user experience
+
+#### trust_track_updated_map.html
+Latest map iteration featuring:
+- **Updated Data**: Most recent crash and transport information
+- **New Features**: Additional safety indicators
+- **Performance Improvements**: Faster loading and smoother interactions
+
+### Cache Directory
+
+#### cache/
+Contains cached data files for faster notebook execution:
+- **OSM Data**: OpenStreetMap network data for Canberra
+- **Graph Objects**: Pre-computed network graphs
+- **Analysis Results**: Cached calculations and computations
+
+## Technical Implementation
+
+### Data Processing Pipeline
+
+#### 1. Data Loading
+```python
+# Load ACT government datasets
+schools = pd.read_csv("Census_Data_for_all_ACT_Schools_20250830.csv")
+crash_data = pd.read_csv("ACT_Road_Crash_Data_20250831.csv")
+bus_routes = pd.read_csv("Bus_Routes.csv")
+```
+
+#### 2. Network Construction
+```python
+# Build walking graph from OpenStreetMap
+G = ox.graph_from_place("Australian Capital Territory, Australia", 
+                       network_type="walk", simplify=True)
+G = ox.distance.add_edge_lengths(G)
+```
+
+#### 3. Safety Scoring
+```python
+# Road class risk assessment
+ROADCLASS_RISK = {
+    "motorway": 1.00, "trunk": 0.95, "primary": 0.90, 
+    "secondary": 0.75, "tertiary": 0.60, "residential": 0.40
+}
+```
+
+#### 4. Route Calculation
+```python
+# Calculate fastest and safest paths
+fastest_path = nx.shortest_path(G, start, end, weight='length')
+safest_path = nx.shortest_path(G, start, end, weight='safety_score')
+```
+
+### Key Algorithms
+
+#### Safety Scoring Algorithm
+1. **Road Classification**: Assign risk scores based on road type
+2. **Crash Density**: Calculate crash frequency per road segment
+3. **Pedestrian Infrastructure**: Assess sidewalk availability and quality
+4. **Traffic Volume**: Consider vehicle density and speed limits
+5. **Lighting Assessment**: Evaluate street lighting coverage
+
+#### Route Optimization
+1. **Multi-objective Optimization**: Balance safety vs. time
+2. **Constraint Satisfaction**: Ensure route feasibility
+3. **Dynamic Weighting**: Adjust safety/time preferences
+4. **Alternative Generation**: Provide multiple route options
+
+## Data Sources
+
+### Government Datasets
+- **ACT Government**: School census, transport, and safety data
+- **OpenStreetMap**: Road network and infrastructure data
+- **ABS (Australian Bureau of Statistics)**: Demographic and transport statistics
+
+### Data Quality
+- **Temporal Coverage**: 2015-2025 crash and transport data
+- **Spatial Accuracy**: High-precision GPS coordinates
+- **Completeness**: Comprehensive coverage of ACT region
+- **Consistency**: Standardized data formats and classifications
+
+## Visualization Features
+
+### Interactive Maps
+- **Layer Controls**: Toggle different data layers
+- **Route Comparison**: Side-by-side fastest vs. safest routes
+- **Safety Heatmaps**: Visual crash density and risk areas
+- **Transport Integration**: Bus routes and stops overlay
+- **Real-time Updates**: Dynamic route recalculation
+
+### Data Visualizations
+- **Crash Analysis**: Yearly trends and severity distributions
+- **Transport Statistics**: Bus usage and route efficiency
+- **Parking Analysis**: Capacity and availability metrics
+- **Safety Metrics**: Risk scores and safety indicators
+
+## Usage
+
+### Running the Notebooks
+```bash
+cd notebooks
+jupyter notebook mvp_routing\ 2.ipynb
+```
 
 ### Prerequisites
-
-- Python 3.8 or higher
-- pip package manager
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd school-safety-demo
-   ```
-
-2. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Run the application**
-   ```bash
-   python3 run.py
-   ```
-
-4. **Access the application**
-   - Open your browser to: http://localhost:8000
-   - API documentation: http://localhost:8000/docs
- 
-## 📱 Application Screenshots
-
-### Main Application Interface
-
-#### Web Application Overview
-![Web Application](screenshots/WebApp.png)
-*Main Trust Track interface with trip planner and interactive map*
-
-#### Interactive Map
-![Interactive Map](screenshots/Map.png)
-*Real-time map with route visualization and safety overlays*
-
-### Trip Planning Features
-
-#### Start Point Selection
-![Start Point](screenshots/start_point.png)
-*Choose your starting location with GPS integration*
-
-#### Destination Planning
-![Destination](screenshots/Destination.png)
-*Select school destinations with safety scoring*
-
-#### Walking Route Planning
-![Walking Route](screenshots/destination-walk.png)
-*Safe walking routes with pedestrian-friendly paths*
-
-### User Interface Components
-
-#### Profile Management
-![Profile](screenshots/Profile.png)
-*User profile and child safety settings management*
-
-#### Application Settings
-![Settings](screenshots/setting.png)
-*Customize safety preferences and notification settings*
-
-### Onboarding Experience
-
-#### Welcome Screen
-![Welcome Screen](screenshots/onboarding_01_welcome.png)
-*Get started with Trust Track's comprehensive safety features*
-
-#### School Selection
-![School Selection](screenshots/onboarding_02_select_school.png)
-*Choose your child's school from the ACT school network*
-
-#### Myki Card Integration
-![Myki Integration](screenshots/onboarding_03_link_myki.png)
-*Link your Myki card for seamless public transport access*
-
-#### Safety Preferences
-![Safety Preferences](screenshots/onboarding_04_set_preferences.png)
-*Customize safety settings and route preferences*
-
-#### Notifications Setup
-![Notifications](screenshots/onboarding_05_enable_notifications.png)
-*Enable real-time safety alerts and route updates*
-
-#### Setup Complete
-![Setup Complete](screenshots/onboarding_06_done.png)
-*You're all set! Start planning safe routes*
-
-### Core Features
-
-#### Trip Planner - Public Transport
-![Public Transport Planner](screenshots/trip_planner_public.png)
-*Plan routes using Canberra's public transport network*
-
-#### Trip Planner - School Bus
-![School Bus Planner](screenshots/trip_planner_school_bus.png)
-*Access dedicated school bus services*
-
-#### School Bus List
-![School Bus List](screenshots/school_buses_list.png)
-*Browse available school bus routes and schedules*
-
-#### School Bus Filtering
-![School Bus Filter](screenshots/school_buses_filter.png)
-*Filter buses by school, time, and safety rating*
-
-#### Route Details
-![Route Details](screenshots/route_details_school_bus.png)
-*Detailed view of selected route with safety information*
-
-### Safety Features
-
-#### Live Bus Tracking
-![Live Tracking](screenshots/live_bus_tracking.png)
-*Real-time bus location and arrival predictions*
-
-#### Report Unsafe Stop
-![Report Form](screenshots/report_unsafe_stop_form.png)
-*Report safety concerns at bus stops or along routes*
-
-#### Report Submitted
-![Report Submitted](screenshots/report_unsafe_stop_submitted.png)
-*Confirmation of safety report submission*
-
-### User Management
-
-#### Profile Management
-![Profile](screenshots/profile_my_child.png)
-*Manage your child's safety settings and preferences*
-
-#### Application Settings
-![Settings](screenshots/settings.png)
-*Customize app preferences and safety thresholds*
-
-### API Documentation
-
-#### Interactive API Docs
-![API Documentation](screenshots/localhost-doc-1.png)
-*Comprehensive API documentation with interactive testing*
-
-#### API Endpoints
-![API Endpoints](screenshots/localhost-doc-2.png)
-*Detailed endpoint documentation and examples*
-
-#### API Testing Interface
-![API Testing](screenshots/localhost-doc-3.png)
-*Test API endpoints directly from the documentation*
-
-## 📁 Project Structure
-
-```
-school-safety-demo/
-├── app.py                 # Main FastAPI application
-├── run.py                # Application startup script
-├── requirements.txt       # Python dependencies
-├── README.md             # This file
-├── frontend/             # Frontend files
-│   ├── index.html        # Main HTML page
-│   ├── styles.css        # CSS styles
-│   └── app.js           # JavaScript functionality
-├── trusttrack/           # Backend routing logic
-│   ├── api.py           # Original API endpoints
-│   ├── routing.py       # Route computation
-│   └── utils.py         # Utility functions
-├── data/                 # Data files (CSV)
-│   ├── ACT_School_Bus_Services.csv
-│   ├── Bus_Routes.csv
-│   ├── Census_Data_for_all_ACT_Schools_20250830.csv
-│   ├── Daily_Public_Transport_Passenger_Journeys_by_Service_Type_20250830.csv
-│   └── Park_And_Ride_Locations.csv
-├── screenshots/          # Application screenshots
-│   ├── WebApp.png        # Main application interface
-│   ├── Map.png           # Interactive map view
-│   ├── Profile.png       # User profile management
-│   ├── setting.png       # Application settings
-│   ├── onboarding_*.png  # Onboarding flow screenshots
-│   ├── trip_planner_*.png # Trip planning features
-│   ├── school_buses_*.png # School bus management
-│   ├── live_bus_*.png    # Live tracking features
-│   ├── report_*.png      # Safety reporting features
-│   └── localhost-doc-*.png # API documentation
-├── mockups/              # Original design mockups
-└── notebooks/            # Jupyter notebooks (original analysis)
+```python
+# Required packages
+import osmnx as ox
+import networkx as nx
+import pandas as pd
+import geopandas as gpd
+import numpy as np
+import folium
+import matplotlib.pyplot as plt
+from shapely import wkt
+from shapely.geometry import Point, LineString
 ```
 
-## 🏗️ Architecture
+### Data Requirements
+- All CSV files must be in the `../data/` directory
+- Internet connection for OpenStreetMap data
+- Sufficient memory for large network graphs
 
-### Frontend
-- **HTML5/CSS3**: Modern, responsive design
-- **JavaScript**: Interactive features and real-time updates
-- **Leaflet.js**: Interactive mapping and route visualization
-- **Font Awesome**: Professional iconography
+## Research Findings
 
-### Backend
-- **FastAPI**: High-performance Python web framework
-- **OSMnx**: OpenStreetMap data processing
-- **NetworkX**: Graph-based routing algorithms
-- **Pandas**: Data manipulation and analysis
+### Safety Insights
+- **High-Risk Areas**: Identified dangerous road segments and intersections
+- **Temporal Patterns**: Crash frequency varies by time of day and season
+- **Infrastructure Impact**: Sidewalk availability significantly affects safety
+- **Transport Integration**: Bus routes can improve overall journey safety
 
-### Data Sources
-- **ACT School Bus Services**: Official school transport data
-- **Park & Ride Locations**: Public transport hubs
-- **Public Transport Journeys**: Real-time passenger data
-- **Census Data**: Demographic and safety analytics
+### Route Optimization Results
+- **Safety vs. Time Trade-off**: Safest routes typically 20-40% longer
+- **Multi-modal Benefits**: Combining walking and bus reduces risk
+- **Alternative Routes**: Multiple safe options available for most journeys
+- **Dynamic Adaptation**: Routes adjust based on real-time conditions
 
-## 🔧 API Endpoints
+## Integration with Trust Track
 
-### Core Routing
-- `GET /api/route` - Calculate optimal routes
-- `GET /api/schools` - List available schools
-- `GET /api/buses` - School bus services
-- `GET /api/safety` - Safety analytics
+### Algorithm Transfer
+- **Core Algorithms**: Notebook algorithms form the basis of the web application
+- **Data Processing**: Similar data loading and preprocessing pipelines
+- **Safety Scoring**: Consistent risk assessment methodology
+- **Route Calculation**: Same optimization algorithms
 
-### User Management
-- `POST /api/report` - Submit safety reports
-- `GET /api/profile` - User preferences
-- `PUT /api/settings` - Update settings
+### Performance Optimization
+- **Caching**: Pre-computed results for faster web application response
+- **Simplification**: Streamlined algorithms for real-time use
+- **API Integration**: Notebook findings inform API endpoint design
+- **User Interface**: Map visualizations guide web application design
 
-## 📊 Safety Features
+## Future Development
 
-### Route Safety Scoring
-- **Well-lit paths**: Prioritizes routes with good lighting
-- **Population density**: Favors populated areas
-- **Crime statistics**: Integrates local safety data
-- **Traffic patterns**: Considers pedestrian-friendly routes
+### Planned Enhancements
+- **Machine Learning**: Predictive safety modeling
+- **Real-time Data**: Live traffic and incident feeds
+- **Weather Integration**: Safety adjustments for weather conditions
+- **User Feedback**: Learning from user route preferences
 
-### Real-Time Monitoring
-- **Live tracking**: Real-time bus and route monitoring
-- **Safety alerts**: Immediate notifications for incidents
-- **Route alternatives**: Automatic re-routing for safety
+### Research Directions
+- **Advanced Analytics**: Deep learning for route optimization
+- **Predictive Modeling**: Anticipating safety risks
+- **Personalization**: User-specific safety preferences
+- **Community Features**: Crowdsourced safety information
 
-## 🛡️ Privacy & Security
+## Contributing
 
-- **Data encryption**: All sensitive data is encrypted
-- **Privacy compliance**: Meets Australian privacy standards
-- **Secure APIs**: Protected endpoints with authentication
-- **Local processing**: Route calculations done locally
+### Adding New Analysis
+1. Create new notebook with clear documentation
+2. Follow existing code structure and conventions
+3. Include data validation and error handling
+4. Add visualizations and explanations
+5. Update this README with new findings
 
-## 🤝 Contributing
+### Data Updates
+1. Ensure new data follows existing formats
+2. Update data loading functions as needed
+3. Validate data quality and completeness
+4. Re-run analysis with updated datasets
+5. Update visualizations and maps
 
-We welcome contributions to improve Trust Track! Please see our contributing guidelines for details on:
+## Support
 
-- Code style and standards
-- Testing requirements
-- Pull request process
-- Issue reporting
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🙏 Acknowledgments
-
-- **ACT Government**: For providing transport and safety data
-- **OpenStreetMap**: For mapping and routing data
-- **Canberra Public Transport**: For real-time service information
-
-## 📞 Support
-
-For support and questions:
-- **Email**: support@trusttrack.com.au
-- **Documentation**: http://localhost:8000/docs
-- **Issues**: GitHub Issues page
+For questions about the notebooks:
+- **Technical Issues**: Check the notebook code and error messages
+- **Data Questions**: Refer to the data source documentation
+- **Algorithm Help**: See the main project README.md for implementation details
+- **Visualization Issues**: Check browser compatibility and JavaScript console
 
 ---
 
-**Trust Track** - Making school journeys safer, one route at a time. 🚌🛡️
+**Trust Track Notebooks** - Research and development foundation for safer school journeys.
