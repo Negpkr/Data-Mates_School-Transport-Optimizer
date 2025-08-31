@@ -243,6 +243,8 @@ We welcome contributions to improve Trust Track! Please see our contributing gui
 - **Web Application**: [webpage/README.md](webpage/README.md)
 - **Risk Calculation**: [riskCalculation/README.md](riskCalculation/README.md)
 - **Research Notebooks**: [notebooks/README.md](notebooks/README.md)
+- **Application**: [application/README.md](application/README.md)
+- **Application**: [application/README.md](application/README.md)
 - **API Reference**: http://localhost:8000/docs
 
 ### Getting Help
