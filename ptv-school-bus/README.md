@@ -362,14 +362,6 @@ gantt
 
 ## Support & Feedback
 
-### Contact Information
-
-| Team | Email | Responsibilities |
-|------|-------|------------------|
-| **Design Team** | [design@ptv.vic.gov.au](mailto:design@ptv.vic.gov.au) | UI/UX design and user research |
-| **Product Team** | [product@ptv.vic.gov.au](mailto:product@ptv.vic.gov.au) | Feature planning and stakeholder management |
-| **Technical Support** | [tech@ptv.vic.gov.au](mailto:tech@ptv.vic.gov.au) | Development and implementation support |
-
 ### Feedback Process
 
 1. **Submit Issues**: Use GitHub issues for bug reports and feature requests
