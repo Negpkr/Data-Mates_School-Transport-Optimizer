@@ -37,111 +37,111 @@ Trust Track is a comprehensive web-based school safety routing application desig
 ### Main Interface
 
 #### Web Application Overview
-![Web Application](screenshots/WebApp.png)
+![Web Application](webpage-screenshots/WebApp.png)
 *Main Trust Track interface with trip planner and interactive map*
 
 #### Interactive Map
-![Interactive Map](screenshots/Map.png)
+![Interactive Map](webpage-screenshots/Map.png)
 *Real-time map with route visualization and safety overlays*
 
 ### Trip Planning Features
 
 #### Start Point Selection
-![Start Point](screenshots/start_point.png)
+![Start Point](webpage-screenshots/start_point.png)
 *Choose your starting location with GPS integration*
 
 #### Destination Planning
-![Destination](screenshots/Destination.png)
+![Destination](webpage-screenshots/Destination.png)
 *Select school destinations with safety scoring*
 
 #### Walking Route Planning
-![Walking Route](screenshots/destination-walk.png)
+![Walking Route](webpage-screenshots/destination-walk.png)
 *Safe walking routes with pedestrian-friendly paths*
 
 ### User Interface Components
 
 #### Profile Management
-![Profile](screenshots/Profile.png)
+![Profile](webpage-screenshots/Profile.png)
 *User profile and child safety settings management*
 
 #### Application Settings
-![Settings](screenshots/setting.png)
+![Settings](webpage-screenshots/setting.png)
 *Customize safety preferences and notification settings*
 
 ### Onboarding Experience
 
 #### Welcome Screen
-![Welcome Screen](screenshots/onboarding_01_welcome.png)
+![Welcome Screen](webpage-screenshots/onboarding_01_welcome.png)
 *Get started with Trust Track's comprehensive safety features*
 
 #### School Selection
-![School Selection](screenshots/onboarding_02_select_school.png)
+![School Selection](webpage-screenshots/onboarding_02_select_school.png)
 *Choose your child's school from the ACT school network*
 
 #### Myki Card Integration
-![Myki Integration](screenshots/onboarding_03_link_myki.png)
+![Myki Integration](webpage-screenshots/onboarding_03_link_myki.png)
 *Link your Myki card for seamless public transport access*
 
 #### Safety Preferences
-![Safety Preferences](screenshots/onboarding_04_set_preferences.png)
+![Safety Preferences](webpage-screenshots/onboarding_04_set_preferences.png)
 *Customize safety settings and route preferences*
 
 #### Notifications Setup
-![Notifications](screenshots/onboarding_05_enable_notifications.png)
+![Notifications](webpage-screenshots/onboarding_05_enable_notifications.png)
 *Enable real-time safety alerts and route updates*
 
 #### Setup Complete
-![Setup Complete](screenshots/onboarding_06_done.png)
+![Setup Complete](webpage-screenshots/onboarding_06_done.png)
 *You're all set! Start planning safe routes*
 
 ### Core Features
 
 #### Trip Planner - Public Transport
-![Public Transport Planner](screenshots/trip_planner_public.png)
+![Public Transport Planner](webpage-screenshots/trip_planner_public.png)
 *Plan routes using Canberra's public transport network*
 
 #### Trip Planner - School Bus
-![School Bus Planner](screenshots/trip_planner_school_bus.png)
+![School Bus Planner](webpage-screenshots/trip_planner_school_bus.png)
 *Access dedicated school bus services*
 
 #### School Bus List
-![School Bus List](screenshots/school_buses_list.png)
+![School Bus List](webpage-screenshots/school_buses_list.png)
 *Browse available school bus routes and schedules*
 
 #### School Bus Filtering
-![School Bus Filter](screenshots/school_buses_filter.png)
+![School Bus Filter](webpage-screenshots/school_buses_filter.png)
 *Filter buses by school, time, and safety rating*
 
 #### Route Details
-![Route Details](screenshots/route_details_school_bus.png)
+![Route Details](webpage-screenshots/route_details_school_bus.png)
 *Detailed view of selected route with safety information*
 
 ### Safety Features
 
 #### Live Bus Tracking
-![Live Tracking](screenshots/live_bus_tracking.png)
+![Live Tracking](webpage-screenshots/live_bus_tracking.png)
 *Real-time bus location and arrival predictions*
 
 #### Report Unsafe Stop
-![Report Form](screenshots/report_unsafe_stop_form.png)
+![Report Form](webpage-screenshots/report_unsafe_stop_form.png)
 *Report safety concerns at bus stops or along routes*
 
 #### Report Submitted
-![Report Submitted](screenshots/report_unsafe_stop_submitted.png)
+![Report Submitted](webpage-screenshots/report_unsafe_stop_submitted.png)
 *Confirmation of safety report submission*
 
 ### API Documentation
 
 #### Interactive API Docs
-![API Documentation](screenshots/localhost-doc-1.png)
+![API Documentation](webpage-screenshots/localhost-doc-1.png)
 *Comprehensive API documentation with interactive testing*
 
 #### API Endpoints
-![API Endpoints](screenshots/localhost-doc-2.png)
+![API Endpoints](webpage-screenshots/localhost-doc-2.png)
 *Detailed endpoint documentation and examples*
 
 #### API Testing Interface
-![API Testing](screenshots/localhost-doc-3.png)
+![API Testing](webpage-screenshots/localhost-doc-3.png)
 *Test API endpoints directly from the documentation*
 
 ## 🚀 How to Use
@@ -275,26 +275,8 @@ Trust Track is a comprehensive web-based school safety routing application desig
 - **Community Features**: Share safe routes with other parents
 - **Multi-language Support**: Support for additional languages
 
-## 📁 Webpage Structure
-
-```
-webpage/
-├── README.md              # This file - Web application documentation
-└── screenshots/           # Application screenshots
-    ├── WebApp.png         # Main application interface
-    ├── Map.png            # Interactive map view
-    ├── Profile.png        # User profile management
-    ├── setting.png        # Application settings
-    ├── onboarding_*.png   # Onboarding flow screenshots
-    ├── trip_planner_*.png # Trip planning features
-    ├── school_buses_*.png # School bus management
-    ├── live_bus_*.png     # Live tracking features
-    ├── report_*.png       # Safety reporting features
-    └── localhost-doc-*.png # API documentation
-```
-
 ---
 
 **Trust Track Web Application** - Making school journeys safer, one route at a time. 🚌🛡️
 
-*For technical documentation and API reference, see the main project README.md file.*
+*For technical documentation and API reference, see the main README.md file.*
