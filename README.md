@@ -3,7 +3,7 @@
 A comprehensive school safety routing application designed to help parents and students find the safest routes to school using public transport, school buses, and walking paths with real-time safety analysis.
 
 ## Project Description
-- [Project_Description.md](Project_Description.md)
+- [Project_Description](Project_Description.md)
 
 ## What is Trust Track?
 
