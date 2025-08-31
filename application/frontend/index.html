@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trust Track - School Safety</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>Trust Track</span>
+            </div>
+            <div class="header-actions">
+                <button class="btn-icon" id="settingsBtn" title="Settings">
+                    <i class="fas fa-cog"></i>
+                </button>
+                <button class="btn-icon" id="profileBtn" title="Profile">
+                    <i class="fas fa-user"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Trip Planner Section -->
+        <section class="trip-planner" id="tripPlanner">
+            <div class="planner-header">
+                <h2><i class="fas fa-route"></i> Trip Planner</h2>
+                <div class="transport-toggle">
+                    <button class="toggle-btn active" data-mode="public">
+                        <i class="fas fa-bus"></i> Public Transport
+                    </button>
+                    <button class="toggle-btn" data-mode="school">
+                        <i class="fas fa-school"></i> School Bus
+                    </button>
+                </div>
+            </div>
+
+            <div class="planner-form">
+                <div class="form-group">
+                    <label for="originInput">
+                        <i class="fas fa-map-marker-alt"></i> Starting Point
+                    </label>
+                    <div class="input-group">
+                        <input type="text" id="originInput" placeholder="Enter place name (e.g., Canberra Centre, Civic, Belconnen)" value="Canberra Centre">
+                        <button class="btn-location" id="useLocationBtn" title="Use my location">
+                            <i class="fas fa-crosshairs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="schoolInput">
+                        <i class="fas fa-graduation-cap"></i> School
+                    </label>
+                    <select id="schoolInput">
+                        <option value="">Select a school...</option>
+                        <option value="Ainslie School">Ainslie School</option>
+                        <option value="Lyneham High School">Lyneham High School</option>
+                        <option value="Canberra High School">Canberra High School</option>
+                        <option value="Dickson College">Dickson College</option>
+                        <option value="Telopea Park School">Telopea Park School</option>
+                        <option value="Narrabundah College">Narrabundah College</option>
+                        <option value="Melrose High School">Melrose High School</option>
+                        <option value="Alfred Deakin High School">Alfred Deakin High School</option>
+                        <option value="Garran Primary School">Garran Primary School</option>
+                        <option value="Red Hill Primary School">Red Hill Primary School</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="dateInput">
+                        <i class="fas fa-calendar"></i> Date
+                    </label>
+                    <input type="date" id="dateInput">
+                </div>
+
+                <div class="form-group">
+                    <label for="timeInput">
+                        <i class="fas fa-clock"></i> Departure Time
+                    </label>
+                    <input type="time" id="timeInput" value="08:00">
+                </div>
+
+                <button class="btn-primary" id="planRouteBtn">
+                    <i class="fas fa-search"></i> Plan Route
+                </button>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results" id="results" style="display: none;">
+            <div class="results-header">
+                <h3>Route Options</h3>
+                <button class="btn-secondary" id="backToPlanner">
+                    <i class="fas fa-arrow-left"></i> Back
+                </button>
+            </div>
+
+            <div class="route-options">
+                <div class="route-card recommended" id="recommendedRoute">
+                    <div class="route-header">
+                        <div class="route-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="route-title">
+                            <h4>Recommended Route</h4>
+                            <span class="route-mode">Bus + Walk</span>
+                        </div>
+                        <div class="route-time">
+                            <span class="time">15 min</span>
+                            <span class="safety-score">Safety: 92%</span>
+                        </div>
+                    </div>
+                    <div class="route-details">
+                        <div class="route-step">
+                            <i class="fas fa-walking"></i>
+                            <span>Walk 3 min to bus stop</span>
+                        </div>
+                        <div class="route-step">
+                            <i class="fas fa-bus"></i>
+                            <span>Bus 8 min to school</span>
+                        </div>
+                        <div class="route-step">
+                            <i class="fas fa-walking"></i>
+                            <span>Walk 4 min to school</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="route-card" id="walkingRoute">
+                    <div class="route-header">
+                        <div class="route-icon">
+                            <i class="fas fa-walking"></i>
+                        </div>
+                        <div class="route-title">
+                            <h4>Walking Route</h4>
+                            <span class="route-mode">Safe Path</span>
+                        </div>
+                        <div class="route-time">
+                            <span class="time">25 min</span>
+                            <span class="safety-score">Safety: 88%</span>
+                        </div>
+                    </div>
+                    <div class="route-details">
+                        <div class="route-step">
+                            <i class="fas fa-walking"></i>
+                            <span>Walk 25 min via safe streets</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="route-card" id="fastRoute">
+                    <div class="route-header">
+                        <div class="route-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="route-title">
+                            <h4>Fastest Route</h4>
+                            <span class="route-mode">Quick Path</span>
+                        </div>
+                        <div class="route-time">
+                            <span class="time">18 min</span>
+                            <span class="safety-score">Safety: 75%</span>
+                        </div>
+                    </div>
+                    <div class="route-details">
+                        <div class="route-step">
+                            <i class="fas fa-walking"></i>
+                            <span>Walk 18 min via main roads</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section">
+            <div class="map-container">
+                <div id="map"></div>
+                <div class="map-controls">
+                    <button class="map-control-btn" id="toggleFast" title="Show Fast Route">
+                        <i class="fas fa-bolt"></i>
+                    </button>
+                    <button class="map-control-btn active" id="toggleSafe" title="Show Safe Route">
+                        <i class="fas fa-shield-alt"></i>
+                    </button>
+                    <button class="map-control-btn" id="toggleBus" title="Show Bus Route">
+                        <i class="fas fa-bus"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modals -->
+    <div class="modal" id="settingsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-cog"></i> Settings</h3>
+                <button class="modal-close" id="closeSettings">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="setting-group">
+                    <label>Safety Preferences</label>
+                    <div class="setting-item">
+                        <span>Prioritize safety over speed</span>
+                        <label class="switch">
+                            <input type="checkbox" id="safetyPriority" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="setting-group">
+                    <label>Notifications</label>
+                    <div class="setting-item">
+                        <span>Route alerts</span>
+                        <label class="switch">
+                            <input type="checkbox" id="routeAlerts" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <span>Safety updates</span>
+                        <label class="switch">
+                            <input type="checkbox" id="safetyUpdates">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="profileModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-user"></i> Profile</h3>
+                <button class="modal-close" id="closeProfile">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="profile-info">
+                    <div class="profile-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h4>Parent Account</h4>
+                    <p>Manage your child's safety settings</p>
+                </div>
+                <div class="profile-actions">
+                    <button class="btn-secondary">
+                        <i class="fas fa-child"></i> Add Child
+                    </button>
+                    <button class="btn-secondary">
+                        <i class="fas fa-bell"></i> Notifications
+                    </button>
+                    <button class="btn-secondary">
+                        <i class="fas fa-history"></i> Trip History
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Planning your route...</p>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="/static/app.js"></script>
+</body>
+</html>
