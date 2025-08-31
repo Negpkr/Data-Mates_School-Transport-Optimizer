@@ -5,18 +5,9 @@
 **Trust Track** is an innovative school safety routing application that leverages data-driven analysis to help parents and students find the safest routes to school. Our mission is to make school journeys safer, one route at a time, by providing intelligent route planning that prioritizes student safety over convenience.
 
 ## Team Members
-
-### Development Team
-- **Lead Developer**: [Your Name] - Full-stack development, API design, and system architecture
-- **Data Analyst**: [Team Member] - Data processing, safety algorithms, and statistical analysis
-- **Frontend Developer**: [Team Member] - User interface design and interactive mapping
-- **Backend Developer**: [Team Member] - Route optimization and real-time data integration
-- **Research Lead**: [Team Member] - Safety analysis and algorithm development
-
-### Advisory Team
-- **Safety Expert**: [Advisor] - Road safety analysis and risk assessment
-- **Transport Specialist**: [Advisor] - Public transport integration and route planning
-- **Education Partner**: [Advisor] - School safety requirements and user needs
+- * Kasfi Ahamed
+- * Negin Pakroohjahromi
+- * Nima Pakroohjahromi
 
 ## Project Description
 
@@ -123,32 +114,6 @@ Through our data transformation, we've created:
 - **Data Completeness**: 95%+ coverage for all major datasets
 - **Update Frequency**: Real-time for transport data, monthly for safety data
 
-## Competition Challenges
-
-### State/Territory Level - ACT
-**Challenge**: ACT Government Open Data Innovation Award
-- **Focus**: Improving public services through data innovation
-- **Relevance**: Our project directly addresses ACT school safety using government data
-- **Impact**: Potential for immediate implementation across ACT schools
-
-### National Level - Australia
-**Challenge**: Australian Data Science Innovation Challenge
-- **Focus**: Data-driven solutions for social impact
-- **Relevance**: School safety is a national concern affecting all states
-- **Impact**: Scalable solution for nationwide implementation
-
-### International Level
-**Challenge**: Global Open Data Challenge
-- **Focus**: Open data reuse for public benefit
-- **Relevance**: School safety is a global issue with universal applicability
-- **Impact**: Framework can be adapted for any city or region
-
-### Additional Competitions
-1. **GovHack Australia** - Government data innovation
-2. **Microsoft Imagine Cup** - Technology for social good
-3. **Google Developer Student Clubs** - Student innovation
-4. **AWS Build On** - Cloud-based solutions for social impact
-
 ## Technical Innovation
 
 ### Algorithm Development
@@ -210,6 +175,6 @@ Our project showcases how data can be transformed from static records into dynam
 
 ---
 
-**Trust Track** - Making school journeys safer, one route at a time. 🚌🛡️
+**Trust Track** - Making school journeys safer, one route at a time. 
 
 *This project demonstrates the transformative power of data reuse and innovation in addressing real-world safety challenges.*
