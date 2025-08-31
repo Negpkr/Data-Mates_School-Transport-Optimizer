@@ -92,21 +92,6 @@ This repository contains the **complete design system** for PTV's School Bus int
 - **Seamless Onboarding** - 6-step guided setup process
 - **Intelligent Notifications** - Contextual alerts and updates
 
-### User Journey Flow
-
-```mermaid
-graph TD
-    A[Download PTV App] --> B[Complete Onboarding]
-    B --> C[Select School & Preferences]
-    C --> D[Link Myki Account]
-    D --> E[Enable Notifications]
-    E --> F[Start Using Features]
-    F --> G[Trip Planning]
-    F --> H[Live Tracking]
-    F --> I[Safety Reporting]
-    F --> J[Profile Management]
-```
-
 ---
 
 ### File Statistics
