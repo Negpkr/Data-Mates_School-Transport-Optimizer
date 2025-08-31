@@ -244,7 +244,7 @@ We welcome contributions to improve Trust Track! Please see our contributing gui
 - **Risk Calculation**: [riskCalculation/README.md](riskCalculation/README.md)
 - **Research Notebooks**: [notebooks/README.md](notebooks/README.md)
 - **Application**: [application/README.md](application/README.md)
-- **Application**: [application/README.md](application/README.md)
+- **PTV Mockups**: [/ptv-school-bus/README.md](ptv-schoolbus/README.md)
 - **API Reference**: http://localhost:8000/docs
 
 ### Getting Help
