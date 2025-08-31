@@ -49,7 +49,7 @@ Trust Track is a comprehensive web-based school safety routing application desig
 *Choose your starting location with GPS integration*
 
 #### Start Point Alternative View
-![Start Point Alternative](screenshots/start-point 1.png)
+![Start Point Alternative](screenshots/start-point-1.png)
 *Alternative view of start point selection interface*
 
 #### Start Point Walking View
@@ -61,7 +61,7 @@ Trust Track is a comprehensive web-based school safety routing application desig
 *Select school destinations with safety scoring*
 
 #### Destination Alternative View
-![Destination Alternative](screenshots/destination 1.png)
+![Destination Alternative](screenshots/destination-1.png)
 *Alternative view of destination selection*
 
 #### Walking Route Planning
