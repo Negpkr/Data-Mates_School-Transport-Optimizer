@@ -35,44 +35,6 @@ Making school journeys safer, one route at a time by providing data-driven safet
 - **Accessibility**: High contrast, readable fonts, keyboard navigation
 - **Performance**: Fast loading times and smooth interactions
 
-## Project Structure
-
-```
-school-safety-demo/
-├── app.py                 # Main FastAPI application
-├── run.py                # Application startup script
-├── requirements.txt       # Python dependencies
-├── README.md             # This file - Project overview
-├── frontend/             # Frontend web application
-│   ├── index.html        # Main HTML page
-│   ├── styles.css        # CSS styles
-│   └── app.js           # JavaScript functionality
-├── trusttrack/           # Backend routing logic
-│   ├── api.py           # API endpoints
-│   ├── routing.py       # Route computation algorithms
-│   └── utils.py         # Utility functions
-├── data/                 # ACT government datasets
-│   ├── ACT_School_Bus_Services.csv
-│   ├── Bus_Routes.csv
-│   ├── Census_Data_for_all_ACT_Schools_20250830.csv
-│   ├── Daily_Public_Transport_Passenger_Journeys_by_Service_Type_20250830.csv
-│   └── Park_And_Ride_Locations.csv
-├── webpage/              # Web application documentation
-│   ├── README.md         # Web application user guide
-│   └── screenshots/      # Application screenshots
-├── riskCalculation/      # Road safety analysis module
-│   ├── README.md         # Risk calculation documentation
-│   ├── calculations.py   # Crash density analysis
-│   └── riskCalculation.docx # Detailed analysis report
-├── notebooks/            # Research and development
-│   ├── README.md         # Notebooks documentation
-│   ├── mvp_routing 2.ipynb # Main analysis notebook
-│   ├── cache/            # Cached data files
-│   └── *.html            # Interactive map visualizations
-├── mockups/              # Original design mockups
-└── cache/                # Application cache files
-```
-
 ## Technology Stack
 
 ### Backend
