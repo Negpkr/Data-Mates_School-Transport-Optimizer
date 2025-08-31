@@ -260,10 +260,10 @@ webpage/
     ├── Profile.png        # User profile management
     ├── setting.png        # Application settings
     ├── start_point.png    # Start point selection
-    ├── start-point 1.png  # Alternative start point view
+    ├── start-point-1.png  # Alternative start point view
     ├── start-point-walk.png # Walking start point view
     ├── Destination.png    # Destination planning
-    ├── destination 1.png  # Alternative destination view
+    ├── destination-1.png  # Alternative destination view
     ├── destination-walk.png # Walking route planning
     ├── localhost-doc-*.png # API documentation screenshots
     └── api-*.png          # Additional API documentation views
@@ -294,6 +294,6 @@ webpage/
 
 **Trust Track Web Application** - Making school journeys safer, one route at a time.
 
-*For technical documentation and API reference, see the main project README.md file.*
+*For other technical documentation, see each folder's README.md file.*
 
 
