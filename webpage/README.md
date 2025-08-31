@@ -34,115 +34,91 @@ Trust Track is a comprehensive web-based school safety routing application desig
 
 ## 🖥️ Application Screenshots
 
-### Main Interface
+### Main Application Interface
 
 #### Web Application Overview
-![Web Application](webpage-screenshots/WebApp.png)
+![Web Application](screenshots/WebApp.png)
 *Main Trust Track interface with trip planner and interactive map*
 
 #### Interactive Map
-![Interactive Map](webpage-screenshots/Map.png)
+![Interactive Map](screenshots/Map.png)
 *Real-time map with route visualization and safety overlays*
 
 ### Trip Planning Features
 
 #### Start Point Selection
-![Start Point](webpage-screenshots/start_point.png)
+![Start Point](screenshots/start_point.png)
 *Choose your starting location with GPS integration*
 
+#### Start Point Alternative View
+![Start Point Alternative](screenshots/start-point 1.png)
+*Alternative view of start point selection interface*
+
+#### Start Point Walking View
+![Start Point Walking](screenshots/start-point-walk.png)
+*Start point selection with walking route options*
+
 #### Destination Planning
-![Destination](webpage-screenshots/Destination.png)
+![Destination](screenshots/Destination.png)
 *Select school destinations with safety scoring*
 
+#### Destination Alternative View
+![Destination Alternative](screenshots/destination 1.png)
+*Alternative view of destination selection*
+
 #### Walking Route Planning
-![Walking Route](webpage-screenshots/destination-walk.png)
+![Walking Route](screenshots/destination-walk.png)
 *Safe walking routes with pedestrian-friendly paths*
 
 ### User Interface Components
 
 #### Profile Management
-![Profile](webpage-screenshots/Profile.png)
+![Profile](screenshots/Profile.png)
 *User profile and child safety settings management*
 
 #### Application Settings
-![Settings](webpage-screenshots/setting.png)
+![Settings](screenshots/setting.png)
 *Customize safety preferences and notification settings*
-
-### Onboarding Experience
-
-#### Welcome Screen
-![Welcome Screen](webpage-screenshots/onboarding_01_welcome.png)
-*Get started with Trust Track's comprehensive safety features*
-
-#### School Selection
-![School Selection](webpage-screenshots/onboarding_02_select_school.png)
-*Choose your child's school from the ACT school network*
-
-#### Myki Card Integration
-![Myki Integration](webpage-screenshots/onboarding_03_link_myki.png)
-*Link your Myki card for seamless public transport access*
-
-#### Safety Preferences
-![Safety Preferences](webpage-screenshots/onboarding_04_set_preferences.png)
-*Customize safety settings and route preferences*
-
-#### Notifications Setup
-![Notifications](webpage-screenshots/onboarding_05_enable_notifications.png)
-*Enable real-time safety alerts and route updates*
-
-#### Setup Complete
-![Setup Complete](webpage-screenshots/onboarding_06_done.png)
-*You're all set! Start planning safe routes*
-
-### Core Features
-
-#### Trip Planner - Public Transport
-![Public Transport Planner](webpage-screenshots/trip_planner_public.png)
-*Plan routes using Canberra's public transport network*
-
-#### Trip Planner - School Bus
-![School Bus Planner](webpage-screenshots/trip_planner_school_bus.png)
-*Access dedicated school bus services*
-
-#### School Bus List
-![School Bus List](webpage-screenshots/school_buses_list.png)
-*Browse available school bus routes and schedules*
-
-#### School Bus Filtering
-![School Bus Filter](webpage-screenshots/school_buses_filter.png)
-*Filter buses by school, time, and safety rating*
-
-#### Route Details
-![Route Details](webpage-screenshots/route_details_school_bus.png)
-*Detailed view of selected route with safety information*
-
-### Safety Features
-
-#### Live Bus Tracking
-![Live Tracking](webpage-screenshots/live_bus_tracking.png)
-*Real-time bus location and arrival predictions*
-
-#### Report Unsafe Stop
-![Report Form](webpage-screenshots/report_unsafe_stop_form.png)
-*Report safety concerns at bus stops or along routes*
-
-#### Report Submitted
-![Report Submitted](webpage-screenshots/report_unsafe_stop_submitted.png)
-*Confirmation of safety report submission*
 
 ### API Documentation
 
-#### Interactive API Docs
-![API Documentation](webpage-screenshots/localhost-doc-1.png)
+#### Interactive API Documentation
+![API Documentation](screenshots/localhost-doc-1.png)
 *Comprehensive API documentation with interactive testing*
 
-#### API Endpoints
-![API Endpoints](webpage-screenshots/localhost-doc-2.png)
+#### API Endpoints Overview
+![API Endpoints](screenshots/localhost-doc-2.png)
 *Detailed endpoint documentation and examples*
 
 #### API Testing Interface
-![API Testing](webpage-screenshots/localhost-doc-3.png)
+![API Testing](screenshots/localhost-doc-3.png)
 *Test API endpoints directly from the documentation*
+
+### Additional API Views
+
+#### API Schema Documentation
+![API Schema](screenshots/api-1.png)
+*API schema and data structure documentation*
+
+#### API Endpoint Details
+![API Endpoint Details](screenshots/api-2.png)
+*Detailed view of specific API endpoints*
+
+#### API Response Examples
+![API Response Examples](screenshots/api-3.png)
+*Example API responses and data formats*
+
+#### Comprehensive API Documentation
+![Comprehensive API Docs](screenshots/api-4.png)
+*Complete API documentation with all endpoints*
+
+#### API Response Testing
+![API Response Testing](screenshots/api-5.png)
+*Interactive API response testing interface*
+
+#### API Schema Overview
+![API Schema Overview](screenshots/api-6.png)
+*Complete API schema and model documentation*
 
 ## 🚀 How to Use
 
@@ -275,8 +251,50 @@ Trust Track is a comprehensive web-based school safety routing application desig
 - **Community Features**: Share safe routes with other parents
 - **Multi-language Support**: Support for additional languages
 
+## 📁 Webpage Structure
+
+```
+webpage/
+├── README.md              # This file - Web application documentation
+└── screenshots/           # Application screenshots
+    ├── WebApp.png         # Main application interface
+    ├── Map.png            # Interactive map view
+    ├── Profile.png        # User profile management
+    ├── setting.png        # Application settings
+    ├── start_point.png    # Start point selection
+    ├── start-point 1.png  # Alternative start point view
+    ├── start-point-walk.png # Walking start point view
+    ├── Destination.png    # Destination planning
+    ├── destination 1.png  # Alternative destination view
+    ├── destination-walk.png # Walking route planning
+    ├── localhost-doc-*.png # API documentation screenshots
+    └── api-*.png          # Additional API documentation views
+```
+
+## 📋 Screenshot Summary
+
+### Main Interface (2 screenshots)
+- Web Application Overview
+- Interactive Map
+
+### Trip Planning (6 screenshots)
+- Start Point Selection (3 variations)
+- Destination Planning (2 variations)
+- Walking Route Planning
+
+### User Interface (2 screenshots)
+- Profile Management
+- Application Settings
+
+### API Documentation (9 screenshots)
+- Interactive API Documentation (3 main views)
+- Additional API Views (6 detailed views)
+
+**Total: 19 screenshots** covering all aspects of the web application
+
 ---
 
 **Trust Track Web Application** - Making school journeys safer, one route at a time. 🚌🛡️
 
-*For technical documentation and API reference, see the main README.md file.*
+*For technical documentation and API reference, see the main project README.md file.*
+
